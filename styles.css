@@ -1,0 +1,162 @@
+:root {
+  color-scheme: light;
+  --ink: #12131a;
+  --muted: #4b4f5c;
+  --accent: #0d5c63;
+  --accent-2: #a08b5a;
+  --paper: #fbfbf9;
+  --card: #ffffff;
+  --border: rgba(18, 19, 26, 0.12);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.name {
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.tagline {
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: rgba(18, 19, 26, 0.04);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.panel {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.panel.simple {
+  margin-bottom: 14px;
+}
+
+.meta {
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.subhead {
+  font-weight: 600;
+  margin: 14px 0 8px;
+  color: var(--accent);
+}
+
+.item-list,
+.fact-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.item-list li,
+.fact-list li {
+  margin-bottom: 8px;
+}
+
+.note {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-row a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.dot {
+  color: var(--accent-2);
+}
+
+.intro {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.site-footer {
+  margin-top: 50px;
+  text-align: center;
+  color: var(--muted);
+}
