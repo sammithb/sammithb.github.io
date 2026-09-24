@@ -130,6 +130,11 @@ a:hover {
   line-height: 1.75;
 }
 
+.contact-section a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .in-progress-page {
   display: grid;
   min-height: 48vh;
