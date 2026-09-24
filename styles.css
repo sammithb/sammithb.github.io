@@ -121,6 +121,20 @@ body {
   line-height: 1.75;
 }
 
+.in-progress-page {
+  display: grid;
+  min-height: 48vh;
+  place-items: center;
+  text-align: center;
+}
+
+.in-progress-page h1 {
+  margin: 0;
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 600;
+}
+
 .section h2 {
   font-family: "Crimson Pro", serif;
   font-size: clamp(1.6rem, 3vw, 2.2rem);
