@@ -1,9 +1,13 @@
 :root {
   color-scheme: light;
-  --ink: #242424;
-  --muted: #6b6b6b;
-  --line: #e3e3e3;
-  --paper: #ffffff;
+  --ink: #12131a;
+  --muted: #4b4f5c;
+  --accent: #0d5c63;
+  --accent-2: #a08b5a;
+  --paper: #fbfbf9;
+  --card: #ffffff;
+  --border: rgba(18, 19, 26, 0.12);
+  --radius: 12px;
 }
 
 * {
@@ -29,7 +33,7 @@ a:hover {
 .page {
   max-width: 980px;
   margin: 0 auto;
-  padding: 28px 24px 56px;
+  padding: 40px 24px 60px;
 }
 
 .site-header {
@@ -38,8 +42,7 @@ a:hover {
   gap: 18px;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 64px;
-  border-bottom: 1px solid var(--line);
+  margin-bottom: 30px;
 }
 
 .nav {
@@ -53,12 +56,17 @@ a:hover {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 14px;
 }
 
 .nav a {
-  padding: 16px 0;
-  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  transition: background 0.2s ease;
 }
 
 .nav a:hover {
@@ -144,9 +152,74 @@ a:hover {
 
 .grid {
   display: grid;
-  min-height: 48vh;
-  place-items: center;
-  text-align: center;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.panel {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.panel.simple {
+  margin-bottom: 14px;
+}
+
+.meta {
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.subhead {
+  font-weight: 600;
+  margin: 14px 0 8px;
+  color: var(--accent);
+}
+
+.item-list,
+.fact-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.item-list li,
+.fact-list li {
+  margin-bottom: 8px;
+}
+
+.note {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-row a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-row a:hover {
+  text-decoration: underline;
+}
+
+.dot {
+  color: var(--accent-2);
+}
+
+.intro {
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 .placeholder-page h1 {
@@ -157,28 +230,9 @@ a:hover {
 }
 
 .site-footer {
-  margin-top: 56px;
-  padding-top: 18px;
+  margin-top: 50px;
   color: var(--muted);
-  border-top: 1px solid var(--line);
-  font-size: 0.9rem;
   text-align: center;
-}
-
-@media (max-width: 800px) {
-  .page {
-    padding: 22px 18px 44px;
-  }
-
-  .site-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .nav {
-    gap: 16px;
-  }
 }
 
 @media (max-width: 680px) {
